@@ -1,0 +1,39 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.text_field :first_name, class: 'form-control', placeholder: 'Primeiro Nome' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.text_field :last_name, class: 'form-control', placeholder: 'Sobrenome' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.text_field :email, class: 'form-control', placeholder: 'E-mail' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.number_field :age, class: 'form-control', placeholder: 'Idade' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Enviar', class: 'btn btn-outline-success' %>
+    <% if params[:id] %>
+      <%= link_to 'Mostrar', @user, class: 'btn btn-outline-primary' %>
+    <% end%>
+    <%= link_to 'Voltar', users_path, class: 'btn btn-outline-secondary' %>
+
+  </div>
+
+<% end %>
