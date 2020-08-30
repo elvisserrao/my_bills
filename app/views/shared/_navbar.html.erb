@@ -1,6 +1,11 @@
 <nav class="nav nav-pills flex-column flex-sm-row">
-  <a class="flex-sm-fill text-sm-center nav-link active" href="#">Home</a>
-  <a class="flex-sm-fill text-sm-center nav-link" href="#">Contas</a>
-  <a class="flex-sm-fill text-sm-center nav-link" href="#">Configurações</a>
-  <a class="flex-sm-fill text-sm-center nav-link disabled" href="#">Sair</a>
+  <a class="flex-sm-fill text-sm-center nav-link" href="#">Home</a>
+  <% if current_user %>
+    <a class="flex-sm-fill text-sm-center nav-link" href="#">Contas</a>
+    <a class="flex-sm-fill text-sm-center nav-link" href="#">Configurações</a>
+    <%= link_to 'Sair', destroy_user_session_path, method: 'delete', class: 'flex-sm-fill text-sm-center nav-link' %>
+  <% else %>
+    <a class="flex-sm-fill text-sm-center nav-link" href='<%= new_user_session_path %>'>Login</a>
+    <a class="flex-sm-fill text-sm-center nav-link" href='<%= new_user_registration_path %>'>Cadastre-se</a>
+  <% end %>
 </nav>
