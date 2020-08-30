@@ -7,6 +7,15 @@ pt-BR:
         restrict_dependent_destroy:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
           has_many: Não é possível excluir o registro pois existem %{record} dependentes
+    attributes:
+      user:
+        age: Idade
+        email: E-mail
+        first_name: Primeiro Nome
+        last_name: Sobrenome
+        password: Senha
+        current_password: Senha Atual
+        password_confirmation: Confirmação de Senha
   date:
     abbr_day_names:
     - dom
