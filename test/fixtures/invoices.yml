@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  category: 
+  value: 1
+  due_date: 2020-08-30
+  payment_date: 2020-08-30
+  user: one
+  card: one
+
+two:
+  name: MyString
+  category: 
+  value: 1
+  due_date: 2020-08-30
+  payment_date: 2020-08-30
+  user: two
+  card: two
