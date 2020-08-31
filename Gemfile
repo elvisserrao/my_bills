@@ -11,6 +11,7 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'devise'
 gem 'rails-i18n', '~> 6.0.0'
+gem 'name_of_person'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

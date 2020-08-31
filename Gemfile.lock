@@ -116,6 +116,8 @@ GEM
     mysql2 (0.5.3-x64-mingw32)
     mysql2 (0.5.3-x86-mingw32)
     mysql2 (0.5.3-x86-mswin32-60)
+    name_of_person (1.1.1)
+      activesupport (>= 5.2.0)
     nio4r (2.5.2)
     nio4r (2.5.2-java)
     nokogiri (1.10.10)
@@ -249,6 +251,7 @@ DEPENDENCIES
   devise
   listen (~> 3.2)
   mysql2 (>= 0.4.4)
+  name_of_person
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
   rails-i18n (~> 6.0.0)
