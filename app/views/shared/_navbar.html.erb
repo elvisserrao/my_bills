@@ -1,7 +1,8 @@
 <nav class="nav nav-pills flex-column flex-sm-row">
   <%= link_to 'Home', root_path, class: 'flex-sm-fill text-sm-center nav-link'%>
   <% if current_user %>
-    <a class="flex-sm-fill text-sm-center nav-link" href="#">Contas</a>
+    <%= link_to 'Contas', invoices_path, class: 'flex-sm-fill text-sm-center nav-link' %>
+    <%= link_to 'Cartões', cards_path, class: 'flex-sm-fill text-sm-center nav-link' %>
     <%= link_to 'Configurações', edit_user_registration_path, class: 'flex-sm-fill text-sm-center nav-link' %>
     <%= link_to 'Sair', destroy_user_session_path, method: 'delete', class: 'flex-sm-fill text-sm-center nav-link' %>
   <% else %>
