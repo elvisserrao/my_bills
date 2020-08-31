@@ -4,8 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :rememberable, :validatable, :trackable
 
-  validates_presence_of :first_name, on: :create, message: "não pode ficar em branco"
-  validates_presence_of :last_name, on: :create, message: "não pode ficar em branco"
-  validates_presence_of :age, on: :create, message: "não pode ficar em branco"
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :email, presence: true
+  validates :age, presence: true
+  validates :age, numericality: { greater_than_or_equal_to: 18 }
+
+  has_many :cards
+  has_many :invoices
 
 end
